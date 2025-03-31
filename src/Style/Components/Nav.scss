@@ -1,0 +1,187 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: $neutral0;
+    border: solid 1px $neutral200;
+    padding: 6px 6px;
+    position: relative;
+
+    & img {
+        max-width: 40px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    &Content {
+        display: flex;
+        align-items: center;
+
+        &Btn {
+            border-radius: 8px;
+            border: solid 1px $neutral200;
+            background-color: $neutral100;
+            width: 40px;
+            height: 40px;
+            padding: 9px 13px;
+        }
+
+        &Icon {
+            font-size: 17px;
+        }
+    }
+}
+
+.nav {
+    @media (max-width: 500px) {
+        display: none;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 60px;
+        margin-top: 12px;
+        background-color: $neutral0;
+        border: solid 1px $neutral200;
+        padding: 12px 12px;
+        border-radius: 10px;
+    }
+
+    &Toggle {
+        cursor: pointer;
+        display: none;
+        position: absolute;
+        transform: translateY(-50%);
+        width: 40px;
+        z-index: 1000;
+        right: 60px;
+        transition: all 0.3s ease;
+
+        @media (max-width: 500px) {
+            display: block;
+        }
+
+        &.toCross {
+            height: 40px;
+            top: 29px;
+            background-color: $neutral700;
+            border-radius: 10px;
+        }
+    }
+
+    &ToggleBar {
+        background-color: $neutral700;
+        border-radius: 4px;
+        display: block;
+        height: 2px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all 0.3s ease;
+        width: 20px;
+    }
+
+    &Toggle.toCross .navToggleBar {
+        background-color: $neutral0;
+        top: 17px;
+        right: 11px;
+    }
+
+    &Toggle.toCross .navToggleBarTop {
+        transform: translate(0) rotate(45deg);
+    }
+
+    &Toggle.toCross .navToggleBarMiddle {
+        opacity: 0;
+    }
+
+    &Toggle.toCross .navToggleBarBottom {
+        transform: translate(0) rotate(-45deg);
+    }
+
+    &ToggleBar.navToggleBarTop {
+        transform: translateY(-10px);
+    }
+
+    &ToggleBar.navToggleBarBottom {
+        transform: translateY(10px);
+    }
+
+    &.navOpen {
+        display: block;
+    }
+
+
+    &List {
+        display: flex;
+
+        @media (max-width: 500px) {
+            align-items: start;
+            background-color: $neutral0;
+            border-radius: 5px;
+            flex-direction: column;
+            padding: 30px 20px;
+        }
+
+        & hr {
+            display: none;
+            margin-bottom: 6px;
+            height: 1px;
+            width: 100%;
+            color: $neutral200;
+
+            @media (max-width: 500px) {
+                display: block;
+            }
+        }
+    }
+
+    &Item {
+        margin-right: 24px;
+
+        @media (max-width: 500px) {
+            margin-bottom: 6px;
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-right: 20px;
+
+            @media (max-width: 500px) {
+                margin-bottom: 0px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &Link {
+        color: $neutral600;
+        font-family: "DM Sans", sans-serif;
+
+        &.active {
+            color: $neutral700;
+
+            @media (max-width: 500px) {
+                color: $neutral900;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 150%;
+                letter-spacing: -0.5px;
+            }
+        }
+
+        &.active::after,
+        &:hover::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $blue500;
+            margin-top: -3px;
+
+            @media (max-width: 500px) {
+                display: none;
+            }
+        }
+    }
+}
