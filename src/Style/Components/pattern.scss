@@ -1,0 +1,42 @@
+.right,
+.left {
+    position: absolute;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+
+.right {
+    top: -20px;
+    right: -2%;
+
+    @media (max-width: 2500px) {
+        right: -10%;
+    }
+
+    @media (max-width: 1800px) {
+        right: -12%;
+    }
+
+    @media (max-width: 1400px) {
+        right: -18%;
+    }
+}
+
+.left {
+    top: 227px;
+    left: -8%;
+
+    @media (max-width: 2000px) {
+        left: -11%;
+    }
+
+    @media (max-width: 1800px) {
+        left: -12%;
+    }
+
+    @media (max-width: 1400px) {
+        left: -15%;
+    }
+}
