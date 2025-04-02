@@ -1,0 +1,30 @@
+.footer {
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &Text {
+        color: $neutral600;
+    }
+
+    &Medias {
+
+        &Link {
+            margin-right: 16px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            & .icon {
+                color: $neutral600;
+                font-size: 17px;
+
+                &:hover {
+                    opacity: 70%;
+                }
+            }
+        }
+    }
+}
