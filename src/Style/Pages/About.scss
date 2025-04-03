@@ -1,0 +1,95 @@
+.about {
+    position: relative;
+
+    &Content {
+        margin: 0 9px;
+        padding: 48px 10px 32px 10px;
+        border-right: 1px solid $neutral200;
+        border-left: 1px solid $neutral200;
+
+        & hr {
+            display: block;
+            border: 0;
+            border-top: 1px solid $neutral200;
+        }
+
+        & .title {
+            color: $neutral700;
+            margin-bottom: 24px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 145px;
+                height: 8px;
+                background-color: $blue500;
+                margin-top: -12px;
+            }
+        }
+
+        & .text {
+            color: $neutral600;
+        }
+
+        & .list {
+            margin: 20px 0;
+        }
+
+        & .item {
+            color: $neutral600;
+            margin-left: 30px;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                background-color: $neutral600;
+                width: 5px;
+                height: 5px;
+                border-radius: 10px;
+                position: absolute;
+                left: -15px;
+                top: 10px;
+            }
+        }
+
+        & .workspaceImg {
+            margin: 24px 0;
+            border-radius: 12px;
+            width: 100%;
+        }
+
+        & .mediasTitle {
+            color: $neutral700;
+            margin-top: 24px;
+        }
+
+        & .medias {
+            margin: 16px 0 48px 0;
+        }
+
+        & .media {
+            width: 40px;
+            height: 40px;
+            padding: 12px 11px;
+            border-radius: 10px;
+            border: 1px solid $neutral200;
+            margin-right: 12px;
+            background-color: $neutral0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background-color: $neutral200;
+                border: 1px solid $neutral300;
+            }
+
+            & .icon {
+                font-size: 17px;
+                color: $neutral700;
+            }
+        }
+    }
+}
