@@ -14,7 +14,7 @@ function Nav() {
     return (
         <div className="header">
             <Link to={"/"}>
-                <img src={Avatar} alt="photo d'une personne" />
+                <img src={Avatar} alt="avatar d'une personne" />
             </Link>
             <div className="headerContent">
                 <div id="navToggle" className={`navToggle ${showNav ? "toCross" : ""}`} onClick={handleShowNav}>
