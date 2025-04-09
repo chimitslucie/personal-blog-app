@@ -1,0 +1,93 @@
+.newsletter {
+    position: relative;
+
+    &Content {
+        margin: 0 9px;
+        padding: 48px 10px 32px 10px;
+        border-right: 1px solid $neutral200;
+        border-left: 1px solid $neutral200;
+
+        & hr {
+            display: block;
+            border: 0;
+            border-top: 1px solid $neutral200;
+            margin-top: 40%;
+        }
+
+        & .title {
+            color: $neutral700;
+            margin-bottom: 16px;
+        }
+
+        & .text {
+            color: $neutral600;
+
+            &:last-child {
+                margin-top: 8px;
+            }
+        }
+
+        & .subtitle {
+            color: $neutral700;
+            margin: 16px 0 24px 0;
+        }
+
+        & .form {
+
+            &Group {
+                display: flex;
+                flex-direction: column;
+
+                & label {
+                    color: $neutral700;
+                }
+
+                & input {
+                    color: $neutral600;
+                    margin-top: 6px;
+                    background-color: $neutral0;
+                    border-radius: 10px;
+                    border: 1px solid $neutral300;
+                    padding: 12px 16px;
+
+                    &:hover {
+                        background-color: $neutral200;
+                    }
+                }
+            }
+
+            & .error {
+                color: $red600;
+                display: flex;
+                margin-top: 6px;
+
+                & img {
+                    margin-right: 8px;
+                }
+            }
+
+            & .validate {
+                color: $green700;
+                margin-top: 6px;
+
+                & .icon {
+                    color: $green700;
+                    font-size: 14px;
+                    margin-right: 8px;
+                }
+            }
+
+            & .button {
+                color: $neutral900;
+                border-radius: 10px;
+                background-color: $blue500;
+                padding: 12px 24px;
+                margin-top: 16px;
+
+                &:hover {
+                    background-color: $blue700;
+                }
+            }
+        }
+    }
+}

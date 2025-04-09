@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import fronted from "../Assets/Icons/logo-frontend-mentor.svg";
-import { Link } from "react-router";
 
 function Footer() {
     return (
