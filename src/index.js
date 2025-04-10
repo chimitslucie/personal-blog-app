@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Blog from "./Pages/Blog";
 import About from "./Pages/About";
 import Newsletter from "./Pages/Newsletter";
+import Article from "./Pages/Article";
 import "./Style/Main.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -17,6 +18,7 @@ root.render(
         <Route exact path="/Blog" element={<Blog />} />
         <Route exact path="/About" element={<About />} />
         <Route exact path="/Newsletter" element={<Newsletter />} />
+        <Route exact path="/Article" element={<Article />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>

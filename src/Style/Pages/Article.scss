@@ -1,0 +1,10 @@
+.article {
+    position: relative;
+
+    &Content {
+        margin: 0 9px;
+        padding: 48px 10px 32px 10px;
+        border-right: 1px solid $neutral200;
+        border-left: 1px solid $neutral200;
+    }
+}
