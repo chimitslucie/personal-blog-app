@@ -66,7 +66,6 @@ function Newsletter() {
                         <input className="text6 button" type="submit" value="Stay uptaded" />
                         <p className="text text8">Unsubscribe anytime. No spam, I promise &#128578;</p>
                     </form>
-                    <hr />
                     <Footer />
                 </div>
             </div>

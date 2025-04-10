@@ -25,7 +25,7 @@ function Blog() {
                     <section className="blogLinks">
                         {datas.map((data, index) => (
                             <div key={index}>
-                                <Link className="blogLink">
+                                <Link className="blogLink" id={data.id} to={"/Article"}>
                                     <h3 className="blogLinkTitle text5">{data.title}</h3>
                                     <p className="blogLinkDate textItalic8">{formatDate(data.publishedAt)}</p>
                                     <p className="blogLinkText text7">{data.description}</p>

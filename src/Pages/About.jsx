@@ -69,7 +69,6 @@ function About() {
                             <img src={fronted} alt="logo fronted mentor" />
                         </button>
                     </div>
-                    <hr />
                     <Footer />
                 </div>
             </div>

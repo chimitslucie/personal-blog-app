@@ -1,8 +1,16 @@
 .footer {
-    margin-top: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    & hr {
+        display: block;
+        border: 0;
+        border-top: 1px solid $neutral200;
+    }
+
+    &Content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 17px;
+    }
 
     &Text {
         color: $neutral600;

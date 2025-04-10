@@ -67,7 +67,6 @@ function Home() {
             </div>
             <Link to={"/Blog"} className="articlesLink text6"> View all articles </Link>
           </section>
-          <hr />
           <Footer />
         </div>
       </div>
