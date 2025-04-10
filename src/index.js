@@ -18,7 +18,7 @@ root.render(
         <Route exact path="/Blog" element={<Blog />} />
         <Route exact path="/About" element={<About />} />
         <Route exact path="/Newsletter" element={<Newsletter />} />
-        <Route exact path="/Article" element={<Article />} />
+        <Route exact path="/Article/:slug" element={<Article />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>

@@ -5,7 +5,7 @@ import { faXTwitter, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg
 import fronted from "../Assets/Icons/logo-frontend-mentor.svg";
 import { Link } from "react-router";
 import Footer from "../Components/Footer";
-import datas from "../Data/data.json";
+import data from "../Data/data.json";
 
 function Home() {
 
@@ -51,11 +51,11 @@ function Home() {
           <section className="articles">
             <h2 className="articlesTitle text2">Latest Articles</h2>
             <div className="articlesContent">
-              {datas.slice(0, 5).map((data, index) => (
-                <div key={index}>
-                  <Link className="articlesContentLink" id={data.id} to={"/Article"}>
-                    <h3 className="text5">{data.title}</h3>
-                    <p className="textItalic8">{formatDate(data.publishedAt)}</p>
+              {data.slice(0, 5).map((item) => (
+                <div key={item.id}>
+                  <Link className="articlesContentLink" to={`/Article/${item.slug}`}>
+                    <h3 className="text5">{item.title}</h3>
+                    <p className="textItalic8">{formatDate(item.publishedAt)}</p>
                   </Link>
                   <hr />
                 </div>

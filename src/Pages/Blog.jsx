@@ -1,7 +1,7 @@
 import patternLight from "../Assets/Images/pattern-light.svg";
 import Nav from "../Components/Nav";
 import { Link } from "react-router";
-import datas from "../Data/data.json";
+import data from "../Data/data.json";
 import Footer from "../Components/Footer";
 
 function Blog() {
@@ -23,12 +23,12 @@ function Blog() {
                     </section>
                     <hr />
                     <section className="blogLinks">
-                        {datas.map((data, index) => (
-                            <div key={index}>
-                                <Link className="blogLink" id={data.id} to={"/Article"}>
-                                    <h3 className="blogLinkTitle text5">{data.title}</h3>
-                                    <p className="blogLinkDate textItalic8">{formatDate(data.publishedAt)}</p>
-                                    <p className="blogLinkText text7">{data.description}</p>
+                        {data.map((item) => (
+                            <div key={item.id}>
+                                <Link className="blogLink" to={`/Article/${item.slug}`}>
+                                    <h3 className="blogLinkTitle text5">{item.title}</h3>
+                                    <p className="blogLinkDate textItalic8">{formatDate(item.publishedAt)}</p>
+                                    <p className="blogLinkText text7">{item.description}</p>
                                 </Link>
                                 <hr />
                             </div>
