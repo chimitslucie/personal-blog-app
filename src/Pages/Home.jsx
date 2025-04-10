@@ -57,12 +57,12 @@ function Home() {
                     <h3 className="text5">{item.title}</h3>
                     <p className="textItalic8">{formatDate(item.publishedAt)}</p>
                   </Link>
-                  <hr />
                 </div>
               ))}
             </div>
             <Link to={"/Blog"} className="articlesLink text6"> View all articles </Link>
           </section>
+          <hr />
           <Footer />
         </div>
       </div>

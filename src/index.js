@@ -8,19 +8,22 @@ import About from "./Pages/About";
 import Newsletter from "./Pages/Newsletter";
 import Article from "./Pages/Article";
 import "./Style/Main.scss";
+import { ThemeProvider } from "./Context/ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/Blog" element={<Blog />} />
-        <Route exact path="/About" element={<About />} />
-        <Route exact path="/Newsletter" element={<Newsletter />} />
-        <Route exact path="/Article/:slug" element={<Article />} />
-      </Routes>
-    </HashRouter>
+    <ThemeProvider>
+      <HashRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/Blog" element={<Blog />} />
+          <Route exact path="/About" element={<About />} />
+          <Route exact path="/Newsletter" element={<Newsletter />} />
+          <Route exact path="/Article/:slug" element={<Article />} />
+        </Routes>
+      </HashRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

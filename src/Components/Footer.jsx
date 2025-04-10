@@ -5,7 +5,7 @@ import fronted from "../Assets/Icons/logo-frontend-mentor.svg";
 function Footer() {
     return (
         <div className="footer">
-            <hr />
+            {/* <hr /> */}
             <div className="footerContent">
                 <p className="footerText text8">
                     Made width &#129505; and &#9749;

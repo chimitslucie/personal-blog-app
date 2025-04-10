@@ -1,9 +1,10 @@
 import Avatar from "../Assets/Images/image-avatar.jpg";
 import { Link } from "react-router";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useLocation } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { ThemeContext } from "../Context/ThemeContext";
 
 function Nav() {
     const [showNav, setShowNav] = useState(false);
@@ -12,6 +13,8 @@ function Nav() {
     const handleShowNav = () => {
         setShowNav(!showNav)
     }
+
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
         <div className="header">
@@ -43,8 +46,9 @@ function Nav() {
                         </li>
                     </ul>
                 </nav>
-                <button className="headerContentBtn">
-                    <FontAwesomeIcon icon={faMoon} className="headerContentIcon" />
+                <button className="headerContentBtn" onClick={toggleTheme}>
+                    {theme === "light" ? <FontAwesomeIcon icon={faMoon} className="headerContentIcon" /> : <FontAwesomeIcon icon={faSun} className="headerContentIcon" />}
+
                 </button>
             </div>
         </div>

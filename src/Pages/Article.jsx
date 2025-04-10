@@ -27,6 +27,7 @@ function Article() {
                     <h1 className="text1">{item.title}</h1>
                     <p className="textItalic8">Published {formatDate(item.publishedAt)}</p>
                     <ReactMarkdown>{item.content}</ReactMarkdown>
+                    <hr />
                     <Footer />
                 </div>
             </div>

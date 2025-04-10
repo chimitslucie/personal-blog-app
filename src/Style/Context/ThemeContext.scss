@@ -1,0 +1,332 @@
+body.dark {
+    background-color: $neutral900;
+
+    & .header {
+        background-color: $neutral800;
+        border-color: $neutral700;
+
+        &ContentBtn {
+            border-color: $neutral700;
+            background-color: $neutral900;
+            padding: 9px 11px;
+        }
+
+        &ContentIcon {
+            color: $neutral0;
+        }
+
+        & .nav {
+            @media (max-width: 500px) {
+                background-color: $neutral800;
+                border-color: $neutral700;
+                filter: drop-shadow(0px 8px 15px rgba(8, 6, 25, 6%));
+            }
+
+            &Toggle {
+                &.toCross {
+                    background-color: $neutral0;
+                }
+
+                &Bar {
+                    background-color: $neutral0;
+                }
+            }
+
+            &Toggle.toCross .navToggleBar {
+                background-color: $neutral900;
+            }
+
+            &List {
+                @media (max-width: 500px) {
+                    background-color: $neutral800;
+                }
+
+                & hr {
+                    color: $neutral700;
+                }
+            }
+
+            &Link {
+                color: $neutral400;
+
+                &.active {
+                    color: $neutral0;
+
+                    @media (max-width: 500px) {
+                        color: $neutral0;
+                    }
+                }
+
+                &.active::after,
+                &:hover::after {
+                    background-color: $blue700;
+                }
+            }
+
+        }
+    }
+
+    & .footer {
+        &Text {
+            color: $neutral400;
+        }
+
+        &Medias {
+            &Link {
+                & .icon {
+                    color: $neutral400;
+                }
+            }
+        }
+    }
+
+    & .home {
+        &Content {
+            border-color: $neutral700;
+
+            & hr {
+                border-top-color: $neutral700;
+            }
+        }
+
+        & .profile {
+            &Title {
+                color: $neutral0;
+
+                &::after {
+                    background-color: $blue700;
+                }
+            }
+
+            &Text {
+                color: $neutral400;
+            }
+
+            &Media {
+                border-color: $neutral700;
+                background-color: $neutral800;
+
+                &:hover {
+                    background-color: $neutral700;
+                    border-color: $neutral800;
+                }
+
+                & .icon {
+                    color: $neutral0;
+                }
+            }
+        }
+
+        .articles {
+            &Title {
+                color: $neutral0;
+
+                &:after {
+                    background-color: $blue700;
+                }
+            }
+
+            &Content {
+                &Link {
+                    & h3 {
+                        color: $neutral0;
+                    }
+
+                    & p {
+                        color: $neutral400;
+                    }
+                }
+            }
+
+            &Link {
+                color: $neutral0;
+
+                &::after {
+                    background-color: $blue700;
+                }
+            }
+        }
+    }
+
+    & .blog {
+        &Content {
+            border-color: $neutral700;
+
+            & hr {
+                border-top-color: $neutral700;
+            }
+
+            &Header {
+                & .title {
+                    color: $neutral0;
+
+                    &::after {
+                        background-color: $blue700;
+                    }
+                }
+
+                & .text {
+                    color: $neutral400;
+                }
+            }
+
+            & .blogLink {
+                &Title {
+                    color: $neutral0;
+                }
+
+                &Date {
+                    color: $neutral400;
+                }
+
+                &Text {
+                    color: $neutral400;
+                }
+            }
+        }
+    }
+
+    & .article {
+        &Content {
+            border-color: $neutral700;
+
+            & h1 {
+                color: $neutral0;
+            }
+
+            & p {
+                color: $neutral400;
+            }
+
+            & hr {
+                border-top-color: $neutral700;
+            }
+
+            & h2,
+            & h3 {
+                color: $neutral0;
+            }
+
+            & ol {
+                & li {
+                    color: $neutral400;
+                }
+            }
+
+            & blockquote {
+                border-left-color: $neutral600;
+            }
+
+            & ul {
+                & li {
+                    color: $neutral400;
+
+                    &::before {
+                        background-color: $neutral400;
+                    }
+                }
+            }
+        }
+    }
+
+    & .about {
+        &Content {
+            border-color: $neutral700;
+
+            & hr {
+                border-top-color: $neutral700;
+            }
+
+            & .title {
+                color: $neutral0;
+
+                &::after {
+                    background-color: $blue700;
+                }
+            }
+
+            & .text {
+                color: $neutral400;
+            }
+
+            & .item {
+                color: $neutral400;
+
+                &::before {
+                    background-color: $neutral400;
+                }
+            }
+
+            & .mediasTitle {
+                color: $neutral0;
+            }
+
+            & .media {
+                border-color: $neutral700;
+                background-color: $neutral800;
+
+                &:hover {
+                    background-color: $neutral700;
+                    border-color: $neutral800;
+                }
+
+                & .icon {
+                    color: $neutral0;
+                }
+            }
+        }
+    }
+
+    & .newsletter {
+        &Content {
+            border-color: $neutral700;
+
+            & hr {
+                border-top-color: $neutral700;
+            }
+
+            & .title {
+                color: $neutral0;
+            }
+
+            & .text {
+                color: $neutral400;
+            }
+
+            & .subtitle {
+                color: $neutral0;
+            }
+
+            & .form {
+                &Group {
+                    & label {
+                        color: $neutral0;
+                    }
+
+                    & input {
+                        color: $neutral300;
+                        background-color: $neutral800;
+                        border-color: $neutral600;
+
+                        &:hover {
+                            background-color: $neutral700;
+                            border: 1px solid $neutral600;
+                        }
+                    }
+                }
+
+                & .error {
+                    color: $red400;
+                }
+
+                & .validate {
+                    color: $green500;
+
+                    & .icon {
+                        color: $green500;
+                    }
+                }
+            }
+        }
+    }
+}
