@@ -5,8 +5,15 @@ import { faXTwitter, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg
 import fronted from "../Assets/Icons/logo-frontend-mentor.svg";
 import { Link } from "react-router";
 import Footer from "../Components/Footer";
+import datas from "../Data/data.json";
 
 function Home() {
+
+  const formatDate = (isoString) => {
+    const date = new Date(isoString);
+    return date.toLocaleDateString("en-Us", { month: "long", day: "numeric", year: "numeric" });
+  };
+
   return (
     <div id="home" className="home">
       <img src={patternLight} alt="forme de losange" className="right" />
@@ -44,26 +51,15 @@ function Home() {
           <section className="articles">
             <h2 className="articlesTitle text2">Latest Articles</h2>
             <div className="articlesContent">
-              <Link className="articlesContentLink" to={"/Article"}>
-                <h3 className="text5">Balancing Hobbies and Coding: How Hiking and Rock Climbing Help Me Stay Motivated</h3>
-                <p className="textItalic8">February 18, 2025</p>
-              </Link>
-              <Link className="articlesContentLink" to={"/Article"}>
-                <h3 className="text5">Reading for Inspiration: 5 Books That Shaped My Coding Journey</h3>
-                <p className="textItalic8">February 15, 2025</p>
-              </Link>
-              <Link className="articlesContentLink" to={"/Article"}>
-                <h3 className="text5">Overcoming Imposter Syndromme as a New Developer</h3>
-                <p className="textItalic8">February 10, 2025</p>
-              </Link>
-              <Link className="articlesContentLink" to={"/Article"}>
-                <h3 className="text5">Exploring the World of Responsive Design</h3>
-                <p className="textItalic8">February 4, 2025</p>
-              </Link>
-              <Link className="articlesContentLink" to={"/Article"}>
-                <h3 className="text5">My Favorite Dev Tools for Productivity</h3>
-                <p className="textItalic8">January 29, 2025</p>
-              </Link>
+              {datas.slice(0, 5).map((data, index) => (
+                <div key={index}>
+                  <Link className="articlesContentLink" id={data.id} to={"/Article"}>
+                    <h3 className="text5">{data.title}</h3>
+                    <p className="textItalic8">{formatDate(data.publishedAt)}</p>
+                  </Link>
+                  <hr />
+                </div>
+              ))}
             </div>
             <Link to={"/Blog"} className="articlesLink text6"> View all articles </Link>
           </section>
