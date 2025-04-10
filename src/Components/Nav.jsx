@@ -1,11 +1,13 @@
 import Avatar from "../Assets/Images/image-avatar.jpg";
 import { Link } from "react-router";
 import { useState } from "react";
+import { useLocation } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 
 function Nav() {
     const [showNav, setShowNav] = useState(false);
+    let location = useLocation();
 
     const handleShowNav = () => {
         setShowNav(!showNav)
@@ -25,19 +27,19 @@ function Nav() {
                 <nav className={`nav ${showNav ? "navOpen" : ""}`}>
                     <ul className="navList">
                         <li className="navItem">
-                            <Link to={"/"} className="navLink text8 active">Home</Link>
+                            <Link to={"/"} className={`navLink text8 ${location.pathname === "/" ? "active" : ""}`}>Home</Link>
                         </li>
                         <hr />
                         <li className="navItem">
-                            <Link to={"/Blog"} className="navLink text8">Blog</Link>
+                            <Link to={"/Blog"} className={`navLink text8 ${location.pathname === "/Blog" ? "active" : ""}`}>Blog</Link>
                         </li>
                         <hr />
                         <li className="navItem">
-                            <Link to={"/About"} className="navLink text8">About</Link>
+                            <Link to={"/About"} className={`navLink text8 ${location.pathname === "/About" ? "active" : ""}`}>About</Link>
                         </li>
                         <hr />
                         <li className="navItem">
-                            <Link to={"/Newsletter"} className="navLink text8">Newsletter</Link>
+                            <Link to={"/Newsletter"} className={`navLink text8 ${location.pathname === "/Newsletter" ? "active" : ""}`}>Newsletter</Link>
                         </li>
                     </ul>
                 </nav>
